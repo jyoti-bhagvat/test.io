@@ -1,0 +1,30 @@
+<footer class="footer">
+    <div class="container">
+        <div class="menu-wapper">
+            <a class="footer-logo" href="/">
+                <img src="{{ site.baseurl }}/assets/images/logo/light-logo.svg" alt="Footer Logo">
+            </a>
+            <ul class="menu-list">
+                {% for item in site.data.footerlink.page_link %}
+                <li class="nav-item">
+                    <a href="{{ site.baseurl }}/{{ item.url }}" class="nav-link">{{ item.meta_title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="social-icon">
+                {% for item in site.data.footerlink.social_icon %}
+                <a href="{{ site.baseurl }}/{{ item.url }}">
+                    <i class="{{ item.icon_class }}"></i>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="copy-right d-flex align-items-center justify-content-center">
+            <p> © <span id="year"></span> LogicStar. All rights reserved.</p>
+            <div class="page-link">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
